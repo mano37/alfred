@@ -3,10 +3,10 @@ name: Frontend CI
 on:
   push:
     paths:
-      - "frontend/**"
+      - "alfred/**"
   pull_request:
     paths:
-      - "frontend/**"
+      - "alfred/**"
 
 jobs:
   test:
@@ -23,5 +23,5 @@ jobs:
 
       - name: Run Flutter tests
         run: |
-            cd frontend
+            cd alfred
             flutter test
