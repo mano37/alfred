@@ -3,10 +3,10 @@ name: Backend CI
 on:
   push:
     paths:
-      - "backend/**"
+      - "alfred_backend/**"
   pull_request:
     paths:
-      - "backend/**"
+      - "alfred_backend/**"
 
 jobs:
   test:
@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r backend/requirements.txt
+          pip install -r alfred_backend/requirements.txt
 
       - name: Run tests
-        run: pytest backend/tests
+        run: pytest alfred_backend/tests
