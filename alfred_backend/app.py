@@ -7,5 +7,9 @@ def greet():
     name = request.args.get('name', 'World')
     return jsonify({'message': f'Hello, {name}!'})
 
+@app.route('/api/health', methods=['GET'])
+def heatlh():
+    return jsonify({'Success'})
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
